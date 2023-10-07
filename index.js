@@ -51,4 +51,30 @@ for(let i=0; i<=arr1.length-1; i++) {
     }
 }
 console.log(newarr);
+
+4. // Max Repititions in array and count 
+
+let arr2 = [1,2,4,1,2,3,4,5,6,4,3,7];
+
+let newarr1 = [];
+let maxCount= {
+}
+
+for(let i=0; i<=arr2.length-1; i++) {
+		if(!newarr1.includes(arr2[i])) {
+    	newarr1.push(arr2[i]);
+      maxCount[arr[i]] =1;	
+    } else {
+    	maxCount[arr2[i]] +=1;
+    }
+}
+console.log(maxCount);
+let max = 0;
+for(let key of Object.keys(maxCount)) {
+  if(max < maxCount[key]) {
+  	max = maxCount[key]
+  }
+}
+console.log(max);
+
  
