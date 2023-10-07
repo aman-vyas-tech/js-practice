@@ -38,4 +38,17 @@ for(let i=0; i<arr.length; i++) {
   }
 }
 // console.log(transarr);
+
+
+// 3. Remove Duplicate elemnts from array 
+let arr1 = [1,2,4,1,2,3,4,5,6,4,3,7];
+
+let newarr = [];
+
+for(let i=0; i<=arr1.length-1; i++) {
+		if(!newarr.includes(arr1[i])) {
+    	newarr.push(arr1[i]);
+    }
+}
+console.log(newarr);
  
