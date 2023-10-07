@@ -77,4 +77,19 @@ for(let key of Object.keys(maxCount)) {
 }
 console.log(max);
 
+// 5. Missing values in array 
+
+let arr3 = [2,1,3,5,6,9];
+let missingValues =[];
+
+arr3 = arr3.sort();
+console.log(arr3);
+for(i=1; i<arr3[arr3.length-1]; i++) {
+	if(!arr3.includes(i)) {
+  		missingValues.push(i);
+  } 
+  console.log(i);
+}
+console.log(missingValues);
+
  
