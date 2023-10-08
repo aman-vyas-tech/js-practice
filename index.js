@@ -92,4 +92,31 @@ for(i=1; i<arr3[arr3.length-1]; i++) {
 }
 console.log(missingValues);
 
+// 6. Sort and Array
+let arr = [2,1,3,5,6,9];
+
+for(let i=0; i<arr.length-1;i++) {
+	let temp =0;
+	if(arr[i] > arr[i+1]) {
+  	temp = arr[i+1];
+    arr[i+1] = arr[i];
+    arr[i] = temp;
+  }
+}
+console.log(arr);
+
+//7. Create obj from two array 
+
+function createArray(arr1, arr2) {
+	let obj ={};
+  arr1.forEach((item, i)=> {
+  	obj[item] = arr2[i]
+  });
+  return obj;
+}
+
+const result = createArray([1,2,3,4,5], [5,6,7,8,9]);
+console.log(result);
+
+
  
