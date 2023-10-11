@@ -115,8 +115,42 @@ function createArray(arr1, arr2) {
   return obj;
 }
 
+// With object assign method
+function createArray1(arr1, arr2) {
+	let obj ={};
+	obj = Object.assign({}, {...arr1});
+  return obj;
+}
+
 const result = createArray([1,2,3,4,5], [5,6,7,8,9]);
 console.log(result);
+
+// 8. Prototypal Inheritance in JS
+
+class A {
+    a = 'a'
+  }
+  
+  A.prototype.c = 'c'
+  
+  class B extends A {
+    b = 'b'
+  }
+  
+  class C extends B {
+    d = 'd'
+  }
+  
+  const a = new A()
+  const b = new B()
+  const c = new C()
+  
+  /* console.log(a.a)
+  console.log(a.b)
+  console.log(a.c)
+  console.log(b.a)
+  console.log(b.b) */
+  console.log(b.__proto__.c == a.__proto__.c, c)
 
 
  
