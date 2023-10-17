@@ -152,5 +152,28 @@ class A {
   console.log(b.b) */
   console.log(b.__proto__.c == a.__proto__.c, c)
 
+  // Fucntion Constructors True Methods and Variables
+
+  function A(dev1, dev2) {
+    this.dev1 = "dev1";
+    this.dev2 = 'dev';
+    this.dev3 = "sss";
+    this.printDev2 = function () {
+        console.log(this.dev2, dev3);
+    } 
+    function print() {
+      console.log(this.dev3,  this.dev1);
+    }
+    print();
+  }
+  
+  const a =  new  A("aman","radhika");
+  const b =  new A("aman vyas","radhika");
+  /* console.log(a.printDev2()); */
+  /* console.log(a.dev1);
+  console.log(a.dev2); */
+  console.log(b);
+  
+
 
  
