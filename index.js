@@ -152,7 +152,7 @@ class A {
   console.log(b.b) */
   console.log(b.__proto__.c == a.__proto__.c, c)
 
-  // Fucntion Constructors True Methods and Variables
+  //9.  Fucntion Constructors True Methods and Variables
 
   function A(dev1, dev2) {
     this.dev1 = "dev1";
@@ -173,6 +173,27 @@ class A {
   /* console.log(a.dev1);
   console.log(a.dev2); */
   console.log(b);
+
+  // 10. Fetch async await .then
+
+  const fetchData = async () => {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
+    let response = {};
+    // through await 
+    response = await data.json();  
+    console.log(response);
+    
+    // Through .then
+    data.json().then(r=> {
+    	response = r;
+      console.log(response);
+      }); 
+
+    
+  };
+  fetchData();
   
 
 
